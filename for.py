@@ -3,5 +3,10 @@
 
 names = ['weijy','banfufeng','liaoshaoshan','chenyuanzhou']
 
-for name in names :
-    print(name)
+sum = 0
+
+#for name in names :
+#    print(name)
+for x in range(101):
+    sum = sum+x
+print(sum)
