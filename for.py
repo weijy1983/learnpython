@@ -1,12 +1,7 @@
 #!/usr/local/bin/python3
 # _*_ coding: utf-8 _*_
 
-names = ['weijy','banfufeng','liaoshaoshan','chenyuanzhou']
+L = ['Bart','Lisa','Adam']
 
-sum = 0
-
-#for name in names :
-#    print(name)
-for x in range(101):
-    sum = sum+x
-print(sum)
+for x in range(3):
+    print(L[x])
