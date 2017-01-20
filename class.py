@@ -85,3 +85,33 @@ sq = Screen()
 sq.width = 5
 sq.height = 6
 print(sq.resolution)
+
+class Fib(object):
+    def __init__(self):
+        self.a, self.b = 0, 1       # init two counter a and b
+
+    def __iter__(self):
+        return self                 # is a iterator, return itself
+    
+    def __next__(self):
+        self.a, self.b = self.b, self.a + self.b    # caculater next value
+        if self.a > 100000:         # exit loop
+            raise StopIteration()
+        return self.a               # return next value            
+
+    def __getitem__(sefl, n):
+        a, b = 1, 1
+        for x in range(n):
+            a, b = b, a+b
+        return a            
+
+for n in Fib():
+    print(n)
+
+f = Fib()
+print(f[0])
+print(f[1])
+print(f[2])
+print(f[3])
+print(f[10])
+print(f[100])
