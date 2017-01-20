@@ -5,12 +5,16 @@
 
 __author__='Weijy'
 
+import logging
+
 def foo(s):
     try:
         print(10/s)
-    except ZeroDivisionError as e:
-        print('There are an Error occured:',e)
+    except Exception as e:
+        logging.exception(e)
     finally:
         print('finally...')
+
+    print('END')        
 
 print('End')        
